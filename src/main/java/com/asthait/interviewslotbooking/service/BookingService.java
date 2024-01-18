@@ -7,7 +7,6 @@ import com.asthait.interviewslotbooking.model.InterviewBookingSlot;
 import com.asthait.interviewslotbooking.model.Interviewer;
 import com.asthait.interviewslotbooking.model.Slot;
 import com.asthait.interviewslotbooking.repository.InterviewBookingSlotRepository;
-import com.asthait.interviewslotbooking.repository.InterviewerRepository;
 import com.asthait.interviewslotbooking.repository.SlotRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

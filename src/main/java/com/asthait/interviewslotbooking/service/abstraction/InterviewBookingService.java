@@ -5,8 +5,8 @@ import com.asthait.interviewslotbooking.dto.request.CancelBookingRequestDTO;
 import com.asthait.interviewslotbooking.dto.request.CreateSlotRequestDTO;
 import com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO;
 import com.asthait.interviewslotbooking.dto.response.SlotResponseDTO;
-import jakarta.validation.Valid;
 
+import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.List;
 

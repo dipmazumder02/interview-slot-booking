@@ -1,7 +1,8 @@
 package com.asthait.interviewslotbooking.dto.request;
 
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * Data Transfer Object for updating a booking request.

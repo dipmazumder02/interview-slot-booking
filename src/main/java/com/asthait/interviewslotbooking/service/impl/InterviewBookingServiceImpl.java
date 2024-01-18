@@ -16,10 +16,10 @@ import com.asthait.interviewslotbooking.repository.SlotRepository;
 import com.asthait.interviewslotbooking.service.BookingService;
 import com.asthait.interviewslotbooking.service.SlotService;
 import com.asthait.interviewslotbooking.service.abstraction.InterviewBookingService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -52,7 +52,7 @@ public class InterviewBookingServiceImpl implements InterviewBookingService {
                 .collect(Collectors.toList());
     }
 
-    private SlotResponseDTO convertToSlotResponseDTO(Slot slot) {
+    public SlotResponseDTO convertToSlotResponseDTO(Slot slot) {
         SlotResponseDTO responseDTO = new SlotResponseDTO();
         responseDTO.setSlotId(slot.getId());
         responseDTO.setStartTime(slot.getStartTime());
@@ -89,7 +89,6 @@ public class InterviewBookingServiceImpl implements InterviewBookingService {
 
     @Override
     public void updateBooking(@Valid UpdateBookingRequestDTO updateBookingRequest) {
-        // Check if the provided interviewBookingSlotId is valid
         InterviewBookingSlot bookingSlot = interviewBookingSlotRepository.findById(updateBookingRequest.getInterviewBookingSlotId())
                 .orElseThrow(() -> new BookingException("Invalid interview booking slot ID"));
 
@@ -108,7 +107,6 @@ public class InterviewBookingServiceImpl implements InterviewBookingService {
         bookingSlot.setSlot(newSlot);
         bookingSlot.setInterviewer(newInterviewer);
         bookingSlot.setAgenda(updateBookingRequest.getAgenda());
-
         interviewBookingSlotRepository.save(bookingSlot);
     }
 }
