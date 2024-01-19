@@ -27,4 +27,6 @@ public class InterviewBookingSlot {
 
     @NotBlank(message = "Agenda cannot be blank")
     private String agenda;
+
+
 }

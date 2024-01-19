@@ -4,6 +4,7 @@ import com.asthait.interviewslotbooking.controller.InterviewBookingController;
 import com.asthait.interviewslotbooking.dto.request.*;
 import com.asthait.interviewslotbooking.dto.response.ResponseDTO;
 import com.asthait.interviewslotbooking.dto.response.SlotResponseDTO;
+import com.asthait.interviewslotbooking.model.Slot;
 import com.asthait.interviewslotbooking.service.abstraction.InterviewBookingService;
 import com.asthait.interviewslotbooking.util.ResponseMessageUtil;
 import org.junit.jupiter.api.Test;
@@ -31,7 +32,7 @@ class InterviewBookingControllerTest {
     @Test
     void createBookingSlot_Success() {
         CreateSlotRequestDTO createSlotRequestDTO = new CreateSlotRequestDTO();
-        ResponseEntity<ResponseDTO<String>> responseEntity = interviewBookingController.createBookingSlot(createSlotRequestDTO);
+        ResponseEntity<ResponseDTO<Slot>> responseEntity = interviewBookingController.createBookingSlot(createSlotRequestDTO);
 
         assertEquals(ResponseEntity.ok(ResponseDTO.success(ResponseMessageUtil.BOOKING_SLOT_CREATED)), responseEntity);
         verify(interviewBookingService, times(1)).createBookingSlot(createSlotRequestDTO);
@@ -68,11 +69,12 @@ class InterviewBookingControllerTest {
     void getAllSlotsWithDateTime_Success() {
         LocalDateTime startTime = LocalDateTime.now();
         LocalDateTime endTime = startTime.plusHours(1);
+        AllSlotsRequestDTO allSlotsRequestDTO = new AllSlotsRequestDTO(startTime,endTime);
 
         List<SlotResponseDTO> mockSlotList = Collections.singletonList(new SlotResponseDTO());
         when(interviewBookingService.getAllSlotsWithDateTime(startTime, endTime)).thenReturn(mockSlotList);
 
-        ResponseEntity<ResponseDTO<List<SlotResponseDTO>>> responseEntity = interviewBookingController.getAllSlotsWithDateTime(startTime, endTime);
+        ResponseEntity<ResponseDTO<List<SlotResponseDTO>>> responseEntity = interviewBookingController.getAllSlotsWithDateTime(allSlotsRequestDTO);
 
         assertEquals(ResponseEntity.ok(ResponseDTO.success(mockSlotList, ResponseMessageUtil.OPERATION_SUCCESSFUL)), responseEntity);
         verify(interviewBookingService, times(1)).getAllSlotsWithDateTime(startTime, endTime);

@@ -21,6 +21,4 @@ public class Interviewer {
 
     @NotBlank(message = "Name cannot be blank")
     private String name;
-
-    // getters and setters
 }

@@ -5,6 +5,7 @@ import com.asthait.interviewslotbooking.dto.request.CancelBookingRequestDTO;
 import com.asthait.interviewslotbooking.dto.request.CreateSlotRequestDTO;
 import com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO;
 import com.asthait.interviewslotbooking.dto.response.SlotResponseDTO;
+import com.asthait.interviewslotbooking.model.Slot;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public interface InterviewBookingService {
 
-    void createBookingSlot(@Valid CreateSlotRequestDTO createSlotRequestDTO);
+    Slot createBookingSlot(@Valid CreateSlotRequestDTO createSlotRequestDTO);
 
     void bookSlot(@Valid BookingRequestDTO bookingRequest);
 

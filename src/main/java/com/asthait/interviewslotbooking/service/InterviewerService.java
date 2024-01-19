@@ -3,6 +3,7 @@ package com.asthait.interviewslotbooking.service;
 import com.asthait.interviewslotbooking.exception.BookingException;
 import com.asthait.interviewslotbooking.model.Interviewer;
 import com.asthait.interviewslotbooking.repository.InterviewerRepository;
+import com.asthait.interviewslotbooking.util.ExceptionMessageUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +29,7 @@ public class InterviewerService {
     }
     public Interviewer getInterviewerById(Long interviewerId) {
         return interviewerRepository.findById(interviewerId)
-                .orElseThrow(() -> new BookingException("Invalid interviewer ID"));
+                .orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEWER_ID));
     }
 
 }

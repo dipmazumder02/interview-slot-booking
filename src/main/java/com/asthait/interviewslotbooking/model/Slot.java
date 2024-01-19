@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
  */
 @Entity
 @Data
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = {"start_time", "end_time"}))
 public class Slot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +33,10 @@ public class Slot {
     @Enumerated(EnumType.STRING)
     @NotNull
     private BookingSlotStatus status;
+
+
+    @Version
+    private Long version;
 
 }
 

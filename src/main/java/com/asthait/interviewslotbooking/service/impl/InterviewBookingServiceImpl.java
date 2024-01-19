@@ -16,9 +16,11 @@ import com.asthait.interviewslotbooking.repository.SlotRepository;
 import com.asthait.interviewslotbooking.service.BookingService;
 import com.asthait.interviewslotbooking.service.SlotService;
 import com.asthait.interviewslotbooking.service.abstraction.InterviewBookingService;
+import com.asthait.interviewslotbooking.util.ExceptionMessageUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import javax.validation.Valid;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -35,8 +37,8 @@ public class InterviewBookingServiceImpl implements InterviewBookingService {
     private final BookingService bookingService;
 
     @Override
-    public void createBookingSlot(@Valid CreateSlotRequestDTO createSlotRequestDTO) {
-        slotService.createSlot(createSlotRequestDTO);
+    public Slot createBookingSlot(@Valid CreateSlotRequestDTO createSlotRequestDTO) {
+        return slotService.createSlot(createSlotRequestDTO);
     }
 
     @Override
@@ -71,42 +73,49 @@ public class InterviewBookingServiceImpl implements InterviewBookingService {
     }
 
     @Override
+    @Transactional
     public void cancelBooking(@Valid CancelBookingRequestDTO cancelBookingRequest) {
         Long interviewBookingSlotId = cancelBookingRequest.getInterviewBookingSlotId();
 
         // Check if the provided interviewBookingSlotId is valid
         InterviewBookingSlot bookingSlot = interviewBookingSlotRepository.findById(interviewBookingSlotId)
-                .orElseThrow(() -> new BookingException("Invalid interview booking slot ID"));
-
+                .orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEW_BOOKING_SLOT_ID));
         // Check if the booking exists
         if (bookingSlot == null) {
-            throw new BookingException("Booking not found for the provided ID");
+            throw new BookingException(ExceptionMessageUtil.BOOKING_NOT_FOUND);
         }
-
-        // Remove the entity from the database
-        interviewBookingSlotRepository.delete(bookingSlot);
+        Slot slot = bookingSlot.getSlot();
+        slot.setStatus(BookingSlotStatus.AVAILABLE);
+        slotRepository.save(slot);
+        deleteBookingSlot(bookingSlot);
     }
 
     @Override
+    @Transactional
     public void updateBooking(@Valid UpdateBookingRequestDTO updateBookingRequest) {
         InterviewBookingSlot bookingSlot = interviewBookingSlotRepository.findById(updateBookingRequest.getInterviewBookingSlotId())
-                .orElseThrow(() -> new BookingException("Invalid interview booking slot ID"));
-
-        // Check if the booking exists
-        if (bookingSlot == null) {
-            throw new BookingException("Booking not found for the provided ID");
-        }
-
-        // Update the booking details
+                .orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEW_BOOKING_SLOT_ID));
+        Slot previousSlot = bookingSlot.getSlot();
         Slot newSlot = slotRepository.findById(updateBookingRequest.getSlotId())
-                .orElseThrow(() -> new BookingException("Invalid new slot ID"));
+                .orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_SLOT_ID));
 
         Interviewer newInterviewer = interviewerRepository.findById(updateBookingRequest.getInterviewerId())
-                .orElseThrow(() -> new BookingException("Invalid new interviewer ID"));
+                .orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEWER_ID));
+
+        previousSlot.setStatus(BookingSlotStatus.AVAILABLE);
+        slotRepository.save(previousSlot);
+
+        newSlot.setStatus(BookingSlotStatus.BOOKED);
+        newSlot = slotRepository.save(newSlot);
 
         bookingSlot.setSlot(newSlot);
         bookingSlot.setInterviewer(newInterviewer);
         bookingSlot.setAgenda(updateBookingRequest.getAgenda());
         interviewBookingSlotRepository.save(bookingSlot);
+    }
+
+    @Transactional
+    public void deleteBookingSlot(InterviewBookingSlot bookingSlot) {
+        interviewBookingSlotRepository.delete(bookingSlot);
     }
 }

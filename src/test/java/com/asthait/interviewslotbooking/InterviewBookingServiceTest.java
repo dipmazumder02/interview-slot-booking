@@ -92,6 +92,10 @@ class InterviewBookingServiceTest {
         cancelBookingRequest.setInterviewBookingSlotId(1L);
 
         InterviewBookingSlot bookingSlot = new InterviewBookingSlot();
+        Slot slot = new Slot();
+        slot.setId(1L);
+        slot.setStatus(BookingSlotStatus.AVAILABLE);
+        bookingSlot.setSlot(slot);
         when(interviewBookingSlotRepository.findById(cancelBookingRequest.getInterviewBookingSlotId()))
                 .thenReturn(Optional.of(bookingSlot));
 
