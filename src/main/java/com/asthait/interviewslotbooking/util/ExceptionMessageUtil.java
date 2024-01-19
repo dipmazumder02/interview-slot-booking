@@ -11,4 +11,5 @@ public class ExceptionMessageUtil {
         public static final String SLOT_ALREADY_BOOKED_BY_INTERVIEWER = "This slot is already booked by the specified interviewer";
         public static final String FAILED_TO_BOOK_SLOT = "Failed to book slot after multiple attempts. Please try again.";
         public static final String INVALID_DATE_FORMAT = "Invalid LocalDateTime format.";
+        public static final String WEATHER_API_FAIL = "Failed to fetch weather information";
     }

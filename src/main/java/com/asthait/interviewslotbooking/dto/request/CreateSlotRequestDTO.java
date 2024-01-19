@@ -24,4 +24,6 @@ public class CreateSlotRequestDTO {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @NotNull(message = "End time cannot be null")
     private LocalDateTime endTime;
+
+
 }

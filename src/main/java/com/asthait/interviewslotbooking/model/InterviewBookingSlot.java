@@ -24,7 +24,7 @@ public class InterviewBookingSlot {
     @JoinColumn(name = "interviewer_id", nullable = false)
     private Interviewer interviewer;
 
-
+    private String weatherInformation;
     @NotBlank(message = "Agenda cannot be blank")
     private String agenda;
 

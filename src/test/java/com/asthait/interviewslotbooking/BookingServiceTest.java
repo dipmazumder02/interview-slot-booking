@@ -11,6 +11,7 @@ import com.asthait.interviewslotbooking.repository.SlotRepository;
 import com.asthait.interviewslotbooking.service.BookingService;
 import com.asthait.interviewslotbooking.service.InterviewerService;
 import com.asthait.interviewslotbooking.service.SlotService;
+import com.asthait.interviewslotbooking.service.WeatherService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -28,6 +29,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class BookingServiceTest {
 
+    @Mock
+    private WeatherService weatherService;  // Mock WeatherService
     @Mock
     private InterviewerService interviewerService;
 
@@ -49,6 +52,7 @@ class BookingServiceTest {
         bookingRequest.setInterviewerId(1L);
         bookingRequest.setSlotId(2L);
         bookingRequest.setAgenda("Interview agenda");
+        bookingRequest.setCity("london");
 
         Interviewer mockInterviewer = new Interviewer();
         mockInterviewer.setId(1L);

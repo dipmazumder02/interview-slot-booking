@@ -16,9 +16,5 @@ public class SlotResponseDTO {
 
     private BookingSlotStatus status;
 
-    private Long interviewerId; // Set only if status is BOOKED
-
-    private String interviewerName; // Set only if status is BOOKED
-
-    /* constructors, getters, and setters */
+    private InterviewDetailsDTO interviewDetails;
 }

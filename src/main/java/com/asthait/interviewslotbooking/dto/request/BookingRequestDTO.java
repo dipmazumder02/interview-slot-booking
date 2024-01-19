@@ -16,4 +16,6 @@ public class BookingRequestDTO {
 
     @NotNull(message = "Agenda cannot be null")
     private String agenda;
+    @NotNull(message = "City cannot be null")
+    private String city;
 }

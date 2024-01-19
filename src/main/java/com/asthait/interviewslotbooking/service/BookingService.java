@@ -22,6 +22,7 @@ public class BookingService {
 
     private final InterviewerService interviewerService;
     private final SlotService slotService;
+    private final WeatherService weatherService;
     private final SlotRepository slotRepository;
     private final InterviewBookingSlotRepository interviewBookingSlotRepository;
     private static final int MAX_RETRY_ATTEMPTS = 3;
@@ -45,11 +46,18 @@ public class BookingService {
 
                 Interviewer interviewer = interviewerService.getInterviewerById(bookingRequest.getInterviewerId());
 
+
+                // Fetch weather information based on the interview location
+                String interviewLocation = bookingRequest.getCity();
+                String weatherInformation = weatherService.getWeatherInformation(interviewLocation);
+
                 // Create booking slot entity
                 InterviewBookingSlot bookingSlot = new InterviewBookingSlot();
                 bookingSlot.setInterviewer(interviewer);
                 bookingSlot.setSlot(slot);
                 bookingSlot.setAgenda(bookingRequest.getAgenda());
+                bookingSlot.setWeatherInformation(weatherInformation);
+
 
                 // Update slot status to BOOKED
                 slot.setStatus(BookingSlotStatus.BOOKED);
