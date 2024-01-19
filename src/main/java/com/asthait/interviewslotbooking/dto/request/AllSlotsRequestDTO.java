@@ -5,6 +5,7 @@ import com.asthait.interviewslotbooking.desrializer.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.FutureOrPresent;
@@ -12,7 +13,7 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Data
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class AllSlotsRequestDTO {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @FutureOrPresent(message = "Start time must be in the present or future")
@@ -25,4 +26,5 @@ public class AllSlotsRequestDTO {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     @NotNull(message = "End time cannot be null")
     private LocalDateTime endTime;
+
 }

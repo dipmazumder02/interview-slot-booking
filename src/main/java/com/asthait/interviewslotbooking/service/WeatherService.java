@@ -12,14 +12,9 @@ import org.springframework.web.client.RestTemplate;
 /*https://api-ninjas.com/api/weather*/
 @Service
 public class WeatherService {
-
-    @Value("${weather.api.url}")
-    private String weatherApiUrl;  // Injected from application.properties or application.yml
-
     private final RestTemplate restTemplate;
-
     private final static String WEATHER_API_BASE_URL = "https://api.api-ninjas.com/v1/weather";
-    private final static String WEATHER_API_KEY = "5EaSudOJEgMowMzWlgHidg==mvf4lc1uC85he1e6"; // Replace with your actual API key
+    private final static String WEATHER_API_KEY = "5EaSudOJEgMowMzWlgHidg==mvf4lc1uC85he1e6";
 
     public WeatherService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;

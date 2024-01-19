@@ -19,6 +19,9 @@ import com.asthait.interviewslotbooking.service.SlotService;
 import com.asthait.interviewslotbooking.service.abstraction.InterviewBookingService;
 import com.asthait.interviewslotbooking.util.ExceptionMessageUtil;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -29,29 +32,34 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class InterviewBookingServiceImpl implements InterviewBookingService {
 
     private final SlotRepository slotRepository;
-    private final InterviewerRepository interviewerRepository;
     private final InterviewBookingSlotRepository interviewBookingSlotRepository;
     private final SlotService slotService;
     private final BookingService bookingService;
 
     @Override
     public Slot createBookingSlot(@Valid CreateSlotRequestDTO createSlotRequestDTO) {
+        log.info("Received request to create booking slot: {}", createSlotRequestDTO);
         return slotService.createSlot(createSlotRequestDTO);
     }
 
     @Override
     public void bookSlot(@Valid BookingRequestDTO bookingRequest) {
+        log.info("Received request to book a slot: {}", bookingRequest);
         bookingService.bookSlot(bookingRequest);
+        log.info("Slot booked successfully");
     }
 
     @Override
     public List<SlotResponseDTO> getAllSlotsWithDateTime(LocalDateTime startTime, LocalDateTime endTime) {
-
+        log.info("Received request to get all slots with date-time range: {} to {}", startTime, endTime);
         List<Slot> slots = slotRepository.findByStartTimeBetween(startTime, endTime);
-        return slots.stream().map(this::convertToSlotResponseDTO).collect(Collectors.toList());
+        List<SlotResponseDTO> slotResponseDTOS = slots.stream().map(this::convertToSlotResponseDTO).collect(Collectors.toList());
+        log.info("Returning slots: {}", slotResponseDTOS);
+        return slotResponseDTOS;
     }
 
 
@@ -74,45 +82,17 @@ public class InterviewBookingServiceImpl implements InterviewBookingService {
     }
 
     @Override
-    @Transactional
-    public void cancelBooking(@Valid CancelBookingRequestDTO cancelBookingRequest) {
-        Long interviewBookingSlotId = cancelBookingRequest.getInterviewBookingSlotId();
-
-        // Check if the provided interviewBookingSlotId is valid
-        InterviewBookingSlot bookingSlot = interviewBookingSlotRepository.findById(interviewBookingSlotId).orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEW_BOOKING_SLOT_ID));
-        // Check if the booking exists
-        if (bookingSlot == null) {
-            throw new BookingException(ExceptionMessageUtil.BOOKING_NOT_FOUND);
-        }
-        Slot slot = bookingSlot.getSlot();
-        slot.setStatus(BookingSlotStatus.AVAILABLE);
-        slotRepository.save(slot);
-        deleteBookingSlot(bookingSlot);
+    public void cancelBooking(@Valid CancelBookingRequestDTO cancelBookingRequest) throws BookingException{
+        log.info("Received request to cancel booking: {}", cancelBookingRequest);
+        bookingService.cancelBooking(cancelBookingRequest);
+        log.info("Booking canceled successfully");
     }
 
     @Override
-    @Transactional
     public void updateBooking(@Valid UpdateBookingRequestDTO updateBookingRequest) {
-        InterviewBookingSlot bookingSlot = interviewBookingSlotRepository.findById(updateBookingRequest.getInterviewBookingSlotId()).orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEW_BOOKING_SLOT_ID));
-        Slot previousSlot = bookingSlot.getSlot();
-        Slot newSlot = slotRepository.findById(updateBookingRequest.getSlotId()).orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_SLOT_ID));
-
-        Interviewer newInterviewer = interviewerRepository.findById(updateBookingRequest.getInterviewerId()).orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEWER_ID));
-
-        previousSlot.setStatus(BookingSlotStatus.AVAILABLE);
-        slotRepository.save(previousSlot);
-
-        newSlot.setStatus(BookingSlotStatus.BOOKED);
-        newSlot = slotRepository.save(newSlot);
-
-        bookingSlot.setSlot(newSlot);
-        bookingSlot.setInterviewer(newInterviewer);
-        bookingSlot.setAgenda(updateBookingRequest.getAgenda());
-        interviewBookingSlotRepository.save(bookingSlot);
+        log.info("Received request to update booking: {}", updateBookingRequest);
+        bookingService.updateBooking(updateBookingRequest);
+        log.info("Booking updated successfully");
     }
 
-    @Transactional
-    public void deleteBookingSlot(InterviewBookingSlot bookingSlot) {
-        interviewBookingSlotRepository.delete(bookingSlot);
-    }
 }

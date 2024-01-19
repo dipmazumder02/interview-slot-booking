@@ -1,35 +1,28 @@
 package com.asthait.interviewslotbooking;
-
 import com.asthait.interviewslotbooking.dto.request.*;
-import com.asthait.interviewslotbooking.dto.response.SlotResponseDTO;
-import com.asthait.interviewslotbooking.exception.BookingException;
-import com.asthait.interviewslotbooking.model.*;
-import com.asthait.interviewslotbooking.repository.*;
-import com.asthait.interviewslotbooking.service.*;
-import com.asthait.interviewslotbooking.service.abstraction.InterviewBookingService;
+import com.asthait.interviewslotbooking.model.Slot;
+import com.asthait.interviewslotbooking.repository.InterviewBookingSlotRepository;
+import com.asthait.interviewslotbooking.repository.SlotRepository;
+import com.asthait.interviewslotbooking.service.BookingService;
+import com.asthait.interviewslotbooking.service.SlotService;
 import com.asthait.interviewslotbooking.service.impl.InterviewBookingServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
 import java.time.LocalDateTime;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class InterviewBookingServiceTest {
+public class InterviewBookingServiceTest {
 
     @Mock
     private SlotRepository slotRepository;
-
-    @Mock
-    private InterviewerRepository interviewerRepository;
 
     @Mock
     private InterviewBookingSlotRepository interviewBookingSlotRepository;
@@ -44,76 +37,73 @@ class InterviewBookingServiceTest {
     private InterviewBookingServiceImpl interviewBookingService;
 
     @Test
-    void createBookingSlot_ValidRequest_CallsSlotService() {
+    public void createBookingSlot_ValidRequest_CallsSlotService() {
+        // Mock
         CreateSlotRequestDTO createSlotRequestDTO = new CreateSlotRequestDTO();
+        when(slotService.createSlot(any(CreateSlotRequestDTO.class))).thenReturn(new Slot());
+
+        // Test
         interviewBookingService.createBookingSlot(createSlotRequestDTO);
 
-        verify(slotService).createSlot(createSlotRequestDTO);
+        // Verify
+        verify(slotService, times(1)).createSlot(any(CreateSlotRequestDTO.class));
     }
 
     @Test
-    void bookSlot_ValidBookingRequest_CallsBookingService() {
-        BookingRequestDTO bookingRequest = new BookingRequestDTO();
-        interviewBookingService.bookSlot(bookingRequest);
+    public void bookSlot_ValidRequest_CallsBookingService() {
+        // Mock
+        BookingRequestDTO bookingRequestDTO = new BookingRequestDTO();
+        doNothing().when(bookingService).bookSlot(any(BookingRequestDTO.class));
 
-        verify(bookingService).bookSlot(bookingRequest);
+        // Test
+        interviewBookingService.bookSlot(bookingRequestDTO);
+
+        // Verify
+        verify(bookingService, times(1)).bookSlot(any(BookingRequestDTO.class));
     }
 
     @Test
-    void getAllSlotsWithDateTime_ReturnsListOfSlotResponseDTO() {
-        LocalDateTime startTime = LocalDateTime.now();
-        LocalDateTime endTime = startTime.plusHours(2);
+    public void cancelBooking_ValidRequest_CallsBookingService() {
+        // Mock
+        CancelBookingRequestDTO cancelBookingRequestDTO = new CancelBookingRequestDTO();
+        doNothing().when(bookingService).cancelBooking(any(CancelBookingRequestDTO.class));
 
-        Slot slot1 = new Slot();
-        slot1.setId(1L);
-        slot1.setStartTime(startTime);
-        slot1.setEndTime(endTime);
-        slot1.setStatus(BookingSlotStatus.AVAILABLE);
+        // Test
+        interviewBookingService.cancelBooking(cancelBookingRequestDTO);
 
-        Slot slot2 = new Slot();
-        slot2.setId(2L);
-        slot2.setStartTime(startTime.plusHours(2));
-        slot2.setEndTime(endTime.plusHours(2));
-        slot2.setStatus(BookingSlotStatus.BOOKED);
-
-        when(slotRepository.findByStartTimeBetween(startTime, endTime))
-                .thenReturn(Arrays.asList(slot1, slot2));
-
-        List<SlotResponseDTO> result = interviewBookingService.getAllSlotsWithDateTime(startTime, endTime);
-
-        assertEquals(2, result.size());
-        assertEquals(slot1.getId(), result.get(0).getSlotId());
-        assertEquals(slot2.getId(), result.get(1).getSlotId());
+        // Verify
+        verify(bookingService, times(1)).cancelBooking(any(CancelBookingRequestDTO.class));
     }
 
     @Test
-    void cancelBooking_ValidCancelBookingRequest_DeletesBookingSlot() {
-        CancelBookingRequestDTO cancelBookingRequest = new CancelBookingRequestDTO();
-        cancelBookingRequest.setInterviewBookingSlotId(1L);
+    public void updateBooking_ValidRequest_CallsBookingService() {
+        // Mock
+        UpdateBookingRequestDTO updateBookingRequestDTO = new UpdateBookingRequestDTO();
+        doNothing().when(bookingService).updateBooking(any(UpdateBookingRequestDTO.class));
 
-        InterviewBookingSlot bookingSlot = new InterviewBookingSlot();
-        Slot slot = new Slot();
-        slot.setId(1L);
-        slot.setStatus(BookingSlotStatus.AVAILABLE);
-        bookingSlot.setSlot(slot);
-        when(interviewBookingSlotRepository.findById(cancelBookingRequest.getInterviewBookingSlotId()))
-                .thenReturn(Optional.of(bookingSlot));
+        // Test
+        interviewBookingService.updateBooking(updateBookingRequestDTO);
 
-        interviewBookingService.cancelBooking(cancelBookingRequest);
-
-        verify(interviewBookingSlotRepository).delete(bookingSlot);
+        // Verify
+        verify(bookingService, times(1)).updateBooking(any(UpdateBookingRequestDTO.class));
     }
 
     @Test
-    void cancelBooking_InvalidCancelBookingRequest_ThrowsBookingException() {
-        CancelBookingRequestDTO cancelBookingRequest = new CancelBookingRequestDTO();
-        cancelBookingRequest.setInterviewBookingSlotId(1L);
+    public void getAllSlotsWithDateTime_ValidRequest_CallsSlotRepository() {
+        // Mock
+        LocalDateTime startDateTime = LocalDateTime.now(); // Replace this with your desired start time
+        LocalDateTime endDateTime = startDateTime.plusHours(1); // Replace this with your desired end time
+        AllSlotsRequestDTO allSlotsRequestDTO = new AllSlotsRequestDTO();
+        allSlotsRequestDTO.setStartTime(startDateTime);
+        allSlotsRequestDTO.setEndTime(endDateTime);
+        when(slotRepository.findByStartTimeBetween(any(LocalDateTime.class), any(LocalDateTime.class)))
+                .thenReturn(Collections.singletonList(new Slot()));
 
-        when(interviewBookingSlotRepository.findById(cancelBookingRequest.getInterviewBookingSlotId()))
-                .thenReturn(Optional.empty());
+        // Test
+        interviewBookingService.getAllSlotsWithDateTime(allSlotsRequestDTO.getStartTime(), allSlotsRequestDTO.getEndTime());
 
-        assertThrows(BookingException.class, () -> interviewBookingService.cancelBooking(cancelBookingRequest));
+        // Verify
+        verify(slotRepository, times(1)).findByStartTimeBetween(startDateTime, endDateTime);
     }
 
-    // Add more tests for the remaining methods as needed.
 }

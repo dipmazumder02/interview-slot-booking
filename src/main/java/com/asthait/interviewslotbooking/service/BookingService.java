@@ -1,12 +1,15 @@
 package com.asthait.interviewslotbooking.service;
 
 import com.asthait.interviewslotbooking.dto.request.BookingRequestDTO;
+import com.asthait.interviewslotbooking.dto.request.CancelBookingRequestDTO;
+import com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO;
 import com.asthait.interviewslotbooking.exception.BookingException;
 import com.asthait.interviewslotbooking.model.BookingSlotStatus;
 import com.asthait.interviewslotbooking.model.InterviewBookingSlot;
 import com.asthait.interviewslotbooking.model.Interviewer;
 import com.asthait.interviewslotbooking.model.Slot;
 import com.asthait.interviewslotbooking.repository.InterviewBookingSlotRepository;
+import com.asthait.interviewslotbooking.repository.InterviewerRepository;
 import com.asthait.interviewslotbooking.repository.SlotRepository;
 import com.asthait.interviewslotbooking.util.ExceptionMessageUtil;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +27,7 @@ public class BookingService {
     private final SlotService slotService;
     private final WeatherService weatherService;
     private final SlotRepository slotRepository;
+    private final InterviewerRepository interviewerRepository;
     private final InterviewBookingSlotRepository interviewBookingSlotRepository;
     private static final int MAX_RETRY_ATTEMPTS = 3;
 
@@ -78,7 +82,48 @@ public class BookingService {
         }
     }
 
+    @Transactional
+    public void cancelBooking(CancelBookingRequestDTO cancelBookingRequest){
+        Long interviewBookingSlotId = cancelBookingRequest.getInterviewBookingSlotId();
 
+        // Check if the provided interviewBookingSlotId is valid
+        InterviewBookingSlot bookingSlot = interviewBookingSlotRepository.findById(interviewBookingSlotId).orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEW_BOOKING_SLOT_ID));
+        // Check if the booking exists
+        if (bookingSlot == null) {
+            throw new BookingException(ExceptionMessageUtil.BOOKING_NOT_FOUND);
+        }
+        Slot slot = bookingSlot.getSlot();
+        slot.setStatus(BookingSlotStatus.AVAILABLE);
+        slotRepository.save(slot);
+        interviewBookingSlotRepository.delete(bookingSlot);
+
+    }
+    @Transactional
+    public void updateBooking(UpdateBookingRequestDTO updateBookingRequest){
+        InterviewBookingSlot bookingSlot = interviewBookingSlotRepository.findById(updateBookingRequest.getInterviewBookingSlotId()).orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEW_BOOKING_SLOT_ID));
+        Slot previousSlot = bookingSlot.getSlot();
+        if (previousSlot != null) {
+            // Update the status of the previous slot
+            previousSlot.setStatus(BookingSlotStatus.AVAILABLE);
+            slotRepository.save(previousSlot);
+        } else {
+            // Handle the case where previousSlot is null, e.g., throw an exception or log a message
+            throw new BookingException(ExceptionMessageUtil.PREVIOUS_SLOT_NULL);
+        }
+
+        Slot newSlot = slotRepository.findById(updateBookingRequest.getSlotId()).orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_SLOT_ID));
+        newSlot.setStatus(BookingSlotStatus.BOOKED);
+        newSlot = slotRepository.save(newSlot);
+
+        Interviewer newInterviewer = interviewerRepository.findById(updateBookingRequest.getInterviewerId()).orElseThrow(() -> new BookingException(ExceptionMessageUtil.INVALID_INTERVIEWER_ID));
+
+
+        bookingSlot.setSlot(newSlot);
+        bookingSlot.setInterviewer(newInterviewer);
+        bookingSlot.setAgenda(updateBookingRequest.getAgenda());
+        interviewBookingSlotRepository.save(bookingSlot);
+
+    }
     private void validateInterviewerAndSlot(Long interviewerId, Long slotId) {
         List<InterviewBookingSlot> existingBookings = interviewBookingSlotRepository.findByInterviewerIdAndSlotId(interviewerId, slotId);
         if (!existingBookings.isEmpty()) {

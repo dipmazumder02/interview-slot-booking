@@ -108,5 +108,4 @@ class SlotServiceTest {
         assertThrows(BookingException.class, () -> slotService.createSlot(createSlotRequestDTO));
     }
 
-    // Add more tests for other methods as needed.
 }

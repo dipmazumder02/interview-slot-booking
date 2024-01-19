@@ -1,0 +1,16 @@
+<configuration>
+
+    <!-- Define the log file location and pattern -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/interview-booking.log</file> <!-- Specify the log file path -->
+        <encoder>
+            <pattern>%date{ISO8601} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set the root logger to use the FILE appender -->
+    <root level="info">
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>

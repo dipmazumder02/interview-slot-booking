@@ -7,15 +7,19 @@ import com.asthait.interviewslotbooking.model.Slot;
 import com.asthait.interviewslotbooking.repository.SlotRepository;
 import com.asthait.interviewslotbooking.util.ExceptionMessageUtil;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
-
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class SlotService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(SlotService.class);
 
     private final SlotRepository slotRepository;
 
@@ -35,13 +39,14 @@ public class SlotService {
         slot.setStartTime(startTime);
         slot.setEndTime(endTime);
         slot.setStatus(BookingSlotStatus.AVAILABLE);
-
+        log.info("Created slot: {}", slot);
         return slotRepository.save(slot);
     }
 
     private void validateSlotOverlap(LocalDateTime startTime, LocalDateTime endTime) {
         List<Slot> overlappingSlots = slotRepository.findByStartTimeBetween(startTime, endTime);
         if (!overlappingSlots.isEmpty()) {
+            log.error(ExceptionMessageUtil.SLOT_OVERLAP);
             throw new BookingException(ExceptionMessageUtil.SLOT_OVERLAP);
         }
     }
@@ -49,6 +54,7 @@ public class SlotService {
     private void validateCreateSlotRequest(LocalDateTime startTime, LocalDateTime endTime) {
         // Check if start time is before end time
         if (startTime.isAfter(endTime) || startTime.isEqual(endTime)) {
+            log.error(ExceptionMessageUtil.START_TIME_AFTER_END_TIME);
             throw new BookingException(ExceptionMessageUtil.START_TIME_AFTER_END_TIME);
         }
     }
