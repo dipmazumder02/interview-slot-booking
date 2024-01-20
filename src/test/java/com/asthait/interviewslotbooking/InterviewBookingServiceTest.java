@@ -1,4 +1,5 @@
 package com.asthait.interviewslotbooking;
+
 import com.asthait.interviewslotbooking.dto.request.*;
 import com.asthait.interviewslotbooking.model.Slot;
 import com.asthait.interviewslotbooking.repository.InterviewBookingSlotRepository;
@@ -11,10 +12,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
 import java.time.LocalDateTime;
 import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 

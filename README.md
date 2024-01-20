@@ -2,13 +2,22 @@
 
 The Interview Booking System is a Java Spring Boot application designed to facilitate interview scheduling. It provides a set of APIs to create, retrieve, update, and cancel interview slots.
 
-## Table of Contents
-1. [APIs](#apis)
-2. [Setup](#setup)
-3. [Usage](#usage)
+# Table of Contents
+1. [Introduction](#interview-slot-booking-api)
+2. [API Endpoints](#api-endpoints)
+  - [Create Booking Slot](#1-create-booking-slot)
+  - [Book a Slot](#2-book-a-slot)
+  - [Cancel Booking](#3-cancel-booking)
+  - [Update Booking](#4-update-booking)
+  - [Get All Slots with Date-Time](#5-get-all-slots-with-date-time)
+3. [Run this Project](#run-this-project)
+  - [Prerequisites](#prerequisites)
+  - [Maven](#maven)
+  - [Dockerization](#dockerization)
+  - [Docker Compose](#docker-compose)
+  - [Docker Hub](#docker-hub)
 4. [Contributing](#contributing)
 5. [License](#license)
-
 
 # Interview Slot Booking API
 - **Create Booking Slot:** Create interview slots for a specified start time and end time.
@@ -80,14 +89,15 @@ The Interview Booking System is a Java Spring Boot application designed to facil
 
 - **Endpoint:** `/api/interview/update-booking`
 - **Method:** `POST`
-- **Request Body:**
-  ```json
-  {
-      "interviewerId": 1,
-      "slotId": 1,
-      "agenda": "Updated Interview Agenda",
-      "interviewBookingSlotId": 1
-  }
+  - **Request Body:**
+    ```json
+    {
+        "interviewerId": 1,
+        "slotId": 1,
+        "agenda": "Updated Interview Agenda",
+        "city": "london".
+        "interviewBookingSlotId": 1
+    }
 - **Response:**
   ```json
   {
@@ -125,15 +135,55 @@ The Interview Booking System is a Java Spring Boot application designed to facil
       ],
       "message": "Operation successful"
   }
+## Run this Project
+## Prerequisites
+Make sure you have the following installed:
 
-## Setup
-1. Clone the repository: `git clone https://github.com/your-username/interview-booking-system.git`
-2. Navigate to the project directory: `cd interview-booking-system`
-3. Install dependencies: `./mvnw clean install`
+1. Java 11 or later
+2. Maven
+3. Docker (if you want to use Docker)
+## Maven
+1. Clone the Repository:
+```
+git clone https://github.com/dipmazumder02/interview-slot-booking.git
+cd interview-booking-system
+```
+2. Build the Application:
+```
+mvn clean install
+```
+3. Run the Application:
+```
+java -jar target/interview-booking-system.jar
+```
+The application will start on http://localhost:8080.
 
-## Usage
-1. Run the application: `./mvnw spring-boot:run`
-2. Access Swagger UI documentation: [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+4. Access Swagger UI for API Documentation:
+```
+http://localhost:8080/swagger-ui.html
+```
+## Dockerization
+If you prefer running the application in a Docker container:
+
+1. Build the Docker Image:
+```agsl
+docker build -t interview-booking-system .
+```
+2. Run the Docker Container:
+```agsl
+docker run -p 8080:8080 interview-booking-system
+```
+The application will be accessible at http://localhost:8080.
+## Docker Compose
+To use Docker Compose for an easy setup:
+
+1. Build and Run with Docker Compose:
+```agsl
+docker-compose up -d
+```
+The application will be accessible at http://localhost:8080.
+## Docker Hub
+Docker image for this project is available on Docker Hub: [interview-slot-booking](https://hub.docker.com/repository/docker/dipmazumder/interview-slot-booking/general)
 
 ## Contributing
 Contributions are welcome! Please follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).

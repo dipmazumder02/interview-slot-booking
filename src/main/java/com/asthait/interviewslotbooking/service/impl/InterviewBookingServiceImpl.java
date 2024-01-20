@@ -29,6 +29,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class InterviewBookingServiceImpl implements InterviewBookingService {
 
+
     private final SlotRepository slotRepository;
     private final InterviewBookingSlotRepository interviewBookingSlotRepository;
     private final SlotService slotService;

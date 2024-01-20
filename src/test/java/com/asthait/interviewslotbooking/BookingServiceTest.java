@@ -2,13 +2,11 @@ package com.asthait.interviewslotbooking;
 
 import com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO;
 import com.asthait.interviewslotbooking.exception.BookingException;
-import com.asthait.interviewslotbooking.model.*;
+import com.asthait.interviewslotbooking.model.InterviewBookingSlot;
+import com.asthait.interviewslotbooking.model.Slot;
 import com.asthait.interviewslotbooking.repository.InterviewBookingSlotRepository;
-import com.asthait.interviewslotbooking.repository.InterviewerRepository;
 import com.asthait.interviewslotbooking.repository.SlotRepository;
 import com.asthait.interviewslotbooking.service.BookingService;
-import com.asthait.interviewslotbooking.model.BookingSlotStatus;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

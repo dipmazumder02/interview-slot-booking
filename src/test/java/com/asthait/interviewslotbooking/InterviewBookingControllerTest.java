@@ -4,7 +4,6 @@ import com.asthait.interviewslotbooking.controller.InterviewBookingController;
 import com.asthait.interviewslotbooking.dto.request.*;
 import com.asthait.interviewslotbooking.dto.response.ResponseDTO;
 import com.asthait.interviewslotbooking.dto.response.SlotResponseDTO;
-import com.asthait.interviewslotbooking.exception.BookingException;
 import com.asthait.interviewslotbooking.model.Slot;
 import com.asthait.interviewslotbooking.service.abstraction.InterviewBookingService;
 import com.asthait.interviewslotbooking.util.ResponseMessageUtil;
@@ -22,7 +21,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class InterviewBookingControllerTest {

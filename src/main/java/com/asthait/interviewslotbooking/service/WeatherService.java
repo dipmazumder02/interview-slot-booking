@@ -2,6 +2,7 @@ package com.asthait.interviewslotbooking.service;
 
 import com.asthait.interviewslotbooking.exception.BookingException;
 import com.asthait.interviewslotbooking.util.ExceptionMessageUtil;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -9,14 +10,11 @@ import org.springframework.web.client.RestTemplate;
 
 /*https://api-ninjas.com/api/weather*/
 @Service
+@RequiredArgsConstructor
 public class WeatherService {
     private final RestTemplate restTemplate;
     private final static String WEATHER_API_BASE_URL = "https://api.api-ninjas.com/v1/weather";
     private final static String WEATHER_API_KEY = "5EaSudOJEgMowMzWlgHidg==mvf4lc1uC85he1e6";
-
-    public WeatherService(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
 
     public String getWeatherInformation(String city) {
         HttpHeaders headers = new HttpHeaders();

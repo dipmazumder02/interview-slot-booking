@@ -8,8 +8,6 @@ import com.asthait.interviewslotbooking.service.abstraction.InterviewBookingServ
 import com.asthait.interviewslotbooking.util.ResponseMessageUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

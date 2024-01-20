@@ -22,4 +22,5 @@ public interface InterviewBookingService {
     void updateBooking(@Valid UpdateBookingRequestDTO updateBookingRequest);
 
     List<SlotResponseDTO> getAllSlotsWithDateTime(LocalDateTime startTime, LocalDateTime endTime);
+
 }
