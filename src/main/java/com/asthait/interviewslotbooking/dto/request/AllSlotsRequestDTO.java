@@ -2,7 +2,7 @@ package com.asthait.interviewslotbooking.dto.request;
 
 // CreateSlotRequestDTO.java
 
-import com.asthait.interviewslotbooking.desrializer.LocalDateTimeDeserializer;
+import com.asthait.interviewslotbooking.deserializer.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.asthait.interviewslotbooking.desrializer;
+package com.asthait.interviewslotbooking.deserializer;
 
 import com.asthait.interviewslotbooking.exception.BookingException;
 import com.asthait.interviewslotbooking.util.ExceptionMessageUtil;
