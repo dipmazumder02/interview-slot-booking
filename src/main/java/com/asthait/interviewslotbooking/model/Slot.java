@@ -1,5 +1,6 @@
 package com.asthait.interviewslotbooking.model;
-import lombok.*;
+
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;

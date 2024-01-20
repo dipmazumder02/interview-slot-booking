@@ -109,3 +109,1212 @@
 2024-01-20 01:27:51,495 [http-nio-8080-exec-10] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
 2024-01-20 01:27:57,503 [http-nio-8080-exec-7] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to cancel booking: CancelBookingRequestDTO(interviewBookingSlotId=1)
 2024-01-20 01:27:57,519 [http-nio-8080-exec-7] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking canceled successfully
+2024-01-20 01:36:17,856 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 01:36:17,857 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 01:36:17,868 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 01:36:17,870 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 01:36:24,474 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 19528 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 01:36:24,478 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 01:36:25,715 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 01:36:25,869 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 145 ms. Found 3 JPA repository interfaces.
+2024-01-20 01:36:26,465 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 01:36:26,474 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 01:36:26,474 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 01:36:26,474 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 01:36:26,598 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 01:36:26,598 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2059 ms
+2024-01-20 01:36:26,702 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 01:36:26,855 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 01:36:26,862 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 01:36:27,099 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 01:36:27,166 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 01:36:27,340 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 01:36:27,456 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 01:36:28,192 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 01:36:28,202 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 01:36:29,019 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 01:36:29,294 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 01:36:29,398 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 01:36:29,984 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 01:36:30,037 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 01:36:30,038 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 01:36:30,059 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 01:36:30,100 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 01:36:30,278 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 6.319 seconds (JVM running for 7.331)
+2024-01-20 01:36:30,726 [RMI TCP Connection(2)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 01:36:30,726 [RMI TCP Connection(2)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 01:36:30,729 [RMI TCP Connection(2)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-01-20 01:37:01,371 [http-nio-8080-exec-2] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=2024-01-25T10:00, endTime=2024-01-25T11:00)
+2024-01-20 01:37:01,407 [http-nio-8080-exec-2] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, version=null)
+2024-01-20 01:37:29,065 [http-nio-8080-exec-5] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=2024-01-25T10:00, endTime=null)
+2024-01-20 01:37:29,074 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.time.chrono.ChronoLocalDateTime.toLocalDate()" because "other" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.time.chrono.ChronoLocalDateTime.toLocalDate()" because "other" is null
+	at java.base/java.time.chrono.ChronoLocalDateTime.isAfter(ChronoLocalDateTime.java:533)
+	at java.base/java.time.LocalDateTime.isAfter(LocalDateTime.java:1854)
+	at com.asthait.interviewslotbooking.service.SlotService.validateCreateSlotRequest(SlotService.java:56)
+	at com.asthait.interviewslotbooking.service.SlotService.createSlot(SlotService.java:35)
+	at com.asthait.interviewslotbooking.service.SlotService$$FastClassBySpringCGLIB$$19ef61df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.asthait.interviewslotbooking.service.SlotService$$EnhancerBySpringCGLIB$$9a413591.createSlot(<generated>)
+	at com.asthait.interviewslotbooking.service.impl.InterviewBookingServiceImpl.createBookingSlot(InterviewBookingServiceImpl.java:46)
+	at com.asthait.interviewslotbooking.controller.InterviewBookingController.createBookingSlot(InterviewBookingController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-01-20 08:08:46,676 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h27m19s647ms448µs200ns).
+2024-01-20 08:11:37,658 [http-nio-8080-exec-8] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to get all slots with date-time range: 2024-01-25T10:00 to 2024-01-25T16:00
+2024-01-20 08:11:38,183 [http-nio-8080-exec-8] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Returning slots: [SlotResponseDTO(slotId=1, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, interviewDetails=null)]
+2024-01-20 08:11:54,310 [http-nio-8080-exec-10] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: BookingRequestDTO(interviewerId=1, slotId=1, agenda=, city=london)
+2024-01-20 08:11:58,444 [http-nio-8080-exec-10] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 08:14:35,841 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:14:35,853 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 08:14:35,887 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 08:14:35,893 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 08:14:46,928 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 10284 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 08:14:46,934 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 08:14:49,286 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 08:14:49,599 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 299 ms. Found 3 JPA repository interfaces.
+2024-01-20 08:14:51,116 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 08:14:51,171 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:14:51,172 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 08:14:51,172 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 08:14:51,689 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 08:14:51,689 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4672 ms
+2024-01-20 08:14:52,105 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 08:14:53,200 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 08:14:53,231 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 08:14:53,890 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 08:14:54,014 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 08:14:54,387 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 08:14:54,638 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 08:14:55,912 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 08:14:55,924 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:14:57,271 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 08:14:57,606 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 08:14:57,702 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 08:14:58,401 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:14:58,488 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 08:14:58,489 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 08:14:58,529 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 08:14:58,602 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 08:14:58,881 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 12.541 seconds (JVM running for 14.278)
+2024-01-20 08:14:59,460 [RMI TCP Connection(2)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 08:14:59,460 [RMI TCP Connection(2)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 08:14:59,465 [RMI TCP Connection(2)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-01-20 08:23:55,745 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:23:55,746 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 08:23:55,764 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 08:23:55,768 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 08:24:01,651 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 9004 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 08:24:01,656 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 08:24:04,156 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 08:24:04,487 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 313 ms. Found 3 JPA repository interfaces.
+2024-01-20 08:24:05,614 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 08:24:05,635 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:24:05,637 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 08:24:05,638 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 08:24:05,907 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 08:24:05,907 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4175 ms
+2024-01-20 08:24:06,193 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 08:24:06,766 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 08:24:06,792 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 08:24:07,189 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 08:24:07,342 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 08:24:07,751 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 08:24:08,039 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 08:24:10,006 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 08:24:10,021 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:24:11,433 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 08:24:12,415 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 08:24:12,521 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 08:24:13,798 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:24:13,862 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 08:24:13,863 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 08:24:13,891 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 08:24:13,947 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 08:24:14,175 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 13.099 seconds (JVM running for 14.796)
+2024-01-20 08:24:14,282 [RMI TCP Connection(6)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 08:24:14,282 [RMI TCP Connection(6)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 08:24:14,286 [RMI TCP Connection(6)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-01-20 08:25:59,869 [http-nio-8080-exec-2] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: BookingRequestDTO(interviewerId=1, slotId=1, agenda=null, city=london)
+2024-01-20 08:26:12,032 [http-nio-8080-exec-4] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=2024-01-25T10:00, endTime=2024-01-25T11:00)
+2024-01-20 08:26:12,066 [http-nio-8080-exec-4] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, version=null)
+2024-01-20 08:26:17,433 [http-nio-8080-exec-5] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to get all slots with date-time range: 2024-01-25T10:00 to 2024-01-25T16:00
+2024-01-20 08:26:17,459 [http-nio-8080-exec-5] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Returning slots: [SlotResponseDTO(slotId=1, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, interviewDetails=null)]
+2024-01-20 08:26:20,791 [http-nio-8080-exec-6] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: BookingRequestDTO(interviewerId=1, slotId=1, agenda=null, city=london)
+2024-01-20 08:26:23,813 [http-nio-8080-exec-6] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 08:42:05,159 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:42:05,217 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 08:42:05,358 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 08:42:05,377 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 08:42:18,000 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 1684 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 08:42:18,008 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 08:42:21,313 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 08:42:22,071 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 719 ms. Found 3 JPA repository interfaces.
+2024-01-20 08:42:24,073 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 08:42:24,094 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:42:24,095 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 08:42:24,096 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 08:42:24,375 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 08:42:24,375 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6268 ms
+2024-01-20 08:42:24,724 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 08:42:25,392 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 08:42:25,405 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 08:42:25,717 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 08:42:25,863 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 08:42:26,332 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 08:42:26,527 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 08:42:28,997 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 08:42:29,024 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:42:31,414 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 08:42:32,330 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 08:42:32,623 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 08:42:33,419 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.asthait.interviewslotbooking.exception.GlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+2024-01-20 08:42:33,436 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:42:33,437 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 08:42:33,477 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 08:42:33,489 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 08:42:33,503 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-01-20 08:42:33,601 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-20 08:42:33,669 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.asthait.interviewslotbooking.exception.GlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.asthait.interviewslotbooking.InterviewSlotBookingApplication.main(InterviewSlotBookingApplication.java:16)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.asthait.interviewslotbooking.exception.GlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.asthait.interviewslotbooking.exception.GlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.addExceptionMapping(ExceptionHandlerMethodResolver.java:114)
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:291)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:268)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1090)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:1032)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2024-01-20 08:42:52,099 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 8648 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 08:42:52,102 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 08:42:54,270 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 08:42:54,863 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 569 ms. Found 3 JPA repository interfaces.
+2024-01-20 08:42:57,187 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 08:42:57,219 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:42:57,221 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 08:42:57,221 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 08:42:57,516 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 08:42:57,516 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5322 ms
+2024-01-20 08:42:57,733 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 08:42:58,003 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 08:42:58,012 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 08:42:58,313 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 08:42:58,381 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 08:42:58,561 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 08:42:58,712 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 08:42:59,764 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 08:42:59,777 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:43:00,942 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 08:43:01,275 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 08:43:01,388 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 08:43:01,655 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.asthait.interviewslotbooking.exception.GlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+2024-01-20 08:43:01,662 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:43:01,663 [main] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 08:43:01,674 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 08:43:01,677 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 08:43:01,682 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-01-20 08:43:01,709 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-20 08:43:01,735 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'handlerExceptionResolver' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.asthait.interviewslotbooking.exception.GlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.asthait.interviewslotbooking.InterviewSlotBookingApplication.main(InterviewSlotBookingApplication.java:16)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerExceptionResolver]: Factory method 'handlerExceptionResolver' threw exception; nested exception is java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.asthait.interviewslotbooking.exception.GlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous @ExceptionHandler method mapped for [class org.springframework.web.bind.MethodArgumentNotValidException]: {public org.springframework.http.ResponseEntity com.asthait.interviewslotbooking.exception.GlobalExceptionHandler.handleValidationException(org.springframework.web.bind.MethodArgumentNotValidException), public final org.springframework.http.ResponseEntity org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler.handleException(java.lang.Exception,org.springframework.web.context.request.WebRequest) throws java.lang.Exception}
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.addExceptionMapping(ExceptionHandlerMethodResolver.java:114)
+	at org.springframework.web.method.annotation.ExceptionHandlerMethodResolver.<init>(ExceptionHandlerMethodResolver.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:291)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.afterPropertiesSet(ExceptionHandlerExceptionResolver.java:268)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.addDefaultHandlerExceptionResolvers(WebMvcConfigurationSupport.java:1090)
+	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.handlerExceptionResolver(WebMvcConfigurationSupport.java:1032)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 20 common frames omitted
+2024-01-20 08:44:01,903 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 19760 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 08:44:01,908 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 08:44:03,840 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 08:44:04,110 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 254 ms. Found 3 JPA repository interfaces.
+2024-01-20 08:44:05,652 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 08:44:05,663 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:44:05,663 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 08:44:05,664 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 08:44:05,834 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 08:44:05,835 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3849 ms
+2024-01-20 08:44:06,003 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 08:44:06,325 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 08:44:06,333 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 08:44:06,605 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 08:44:06,678 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 08:44:06,862 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 08:44:07,058 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 08:44:08,033 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 08:44:08,049 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:44:09,673 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 08:44:10,056 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 08:44:10,173 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 08:44:10,868 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:44:10,934 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 08:44:10,935 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 08:44:10,988 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 08:44:11,096 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 08:44:11,110 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 08:44:11,110 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 08:44:11,113 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-01-20 08:44:11,336 [http-nio-8080-exec-2] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=2024-01-25T10:00, endTime=2024-01-25T11:00)
+2024-01-20 08:44:11,478 [http-nio-8080-exec-2] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, version=null)
+2024-01-20 08:44:11,537 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 10.179 seconds (JVM running for 11.293)
+2024-01-20 08:44:23,894 [http-nio-8080-exec-3] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: BookingRequestDTO(interviewerId=1, slotId=1, agenda=null, city=london)
+2024-01-20 08:44:26,707 [http-nio-8080-exec-3] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 08:44:36,597 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:44:36,598 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 08:44:36,618 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 08:44:36,623 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 08:44:42,362 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 16668 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 08:44:42,370 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 08:44:45,478 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 08:44:45,798 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 302 ms. Found 3 JPA repository interfaces.
+2024-01-20 08:44:46,782 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 08:44:46,798 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:44:46,798 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 08:44:46,798 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 08:44:47,054 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 08:44:47,054 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4591 ms
+2024-01-20 08:44:47,285 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 08:44:47,563 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 08:44:47,573 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 08:44:47,881 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 08:44:47,983 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 08:44:48,217 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 08:44:48,371 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 08:44:49,396 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 08:44:49,414 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 08:44:50,786 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 08:44:51,145 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 08:44:51,311 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 08:44:52,010 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 08:44:52,104 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 08:44:52,106 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 08:44:52,147 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 08:44:52,210 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 08:44:52,464 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 10.715 seconds (JVM running for 12.251)
+2024-01-20 08:44:52,964 [RMI TCP Connection(4)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 08:44:52,964 [RMI TCP Connection(4)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 08:44:52,970 [RMI TCP Connection(4)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-01-20 08:59:55,922 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m38s160ms9µs600ns).
+2024-01-20 09:00:08,182 [http-nio-8080-exec-2] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: BookingRequestDTO(interviewerId=1, slotId=1, agenda=null, city=london)
+2024-01-20 09:08:32,054 [http-nio-8080-exec-3] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=2024-01-25T10:00, endTime=2024-01-25T11:00)
+2024-01-20 09:08:32,116 [http-nio-8080-exec-3] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, version=null)
+2024-01-20 09:08:36,330 [http-nio-8080-exec-6] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: BookingRequestDTO(interviewerId=1, slotId=1, agenda=null, city=london)
+2024-01-20 09:08:52,699 [http-nio-8080-exec-6] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 09:08:59,199 [http-nio-8080-exec-5] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to cancel booking: CancelBookingRequestDTO(interviewBookingSlotId=1)
+2024-01-20 09:09:14,211 [http-nio-8080-exec-5] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking canceled successfully
+2024-01-20 09:09:22,939 [http-nio-8080-exec-7] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: BookingRequestDTO(interviewerId=1, slotId=1, agenda=null, city=london)
+2024-01-20 09:09:24,194 [http-nio-8080-exec-7] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 09:11:40,023 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:11:40,025 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 09:11:40,071 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 09:11:40,079 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 09:11:51,534 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 19980 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 09:11:51,541 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 09:11:54,743 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 09:11:55,441 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 656 ms. Found 3 JPA repository interfaces.
+2024-01-20 09:11:57,698 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 09:11:57,740 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:11:57,741 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 09:11:57,741 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 09:11:58,283 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 09:11:58,283 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6649 ms
+2024-01-20 09:11:58,646 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 09:11:59,228 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 09:11:59,256 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 09:11:59,909 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 09:12:00,113 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 09:12:00,835 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 09:12:01,138 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 09:12:02,902 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 09:12:02,918 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:12:05,395 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 09:12:06,176 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 09:12:06,453 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 09:12:07,247 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:12:07,354 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 09:12:07,356 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 09:12:07,409 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 09:12:07,489 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 09:12:07,827 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 16.944 seconds (JVM running for 18.675)
+2024-01-20 09:12:08,272 [RMI TCP Connection(3)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 09:12:08,272 [RMI TCP Connection(3)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 09:12:08,277 [RMI TCP Connection(3)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-01-20 09:12:20,150 [http-nio-8080-exec-2] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=null, endTime=2024-01-25T11:00)
+2024-01-20 09:12:20,180 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null
+	at com.asthait.interviewslotbooking.service.SlotService.validateCreateSlotRequest(SlotService.java:56)
+	at com.asthait.interviewslotbooking.service.SlotService.createSlot(SlotService.java:35)
+	at com.asthait.interviewslotbooking.service.SlotService$$FastClassBySpringCGLIB$$19ef61df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.asthait.interviewslotbooking.service.SlotService$$EnhancerBySpringCGLIB$$56657bef.createSlot(<generated>)
+	at com.asthait.interviewslotbooking.service.impl.InterviewBookingServiceImpl.createBookingSlot(InterviewBookingServiceImpl.java:46)
+	at com.asthait.interviewslotbooking.controller.InterviewBookingController.createBookingSlot(InterviewBookingController.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-01-20 09:15:04,038 [http-nio-8080-exec-4] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=null, endTime=2024-01-25T11:00)
+2024-01-20 09:15:04,046 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null
+	at com.asthait.interviewslotbooking.service.SlotService.validateCreateSlotRequest(SlotService.java:56)
+	at com.asthait.interviewslotbooking.service.SlotService.createSlot(SlotService.java:35)
+	at com.asthait.interviewslotbooking.service.SlotService$$FastClassBySpringCGLIB$$19ef61df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.asthait.interviewslotbooking.service.SlotService$$EnhancerBySpringCGLIB$$56657bef.createSlot(<generated>)
+	at com.asthait.interviewslotbooking.service.impl.InterviewBookingServiceImpl.createBookingSlot(InterviewBookingServiceImpl.java:46)
+	at com.asthait.interviewslotbooking.controller.InterviewBookingController.createBookingSlot(InterviewBookingController.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-01-20 09:18:14,867 [http-nio-8080-exec-6] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=null, endTime=2024-01-25T11:00)
+2024-01-20 09:18:14,869 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null
+	at com.asthait.interviewslotbooking.service.SlotService.validateCreateSlotRequest(SlotService.java:56)
+	at com.asthait.interviewslotbooking.service.SlotService.createSlot(SlotService.java:35)
+	at com.asthait.interviewslotbooking.service.SlotService$$FastClassBySpringCGLIB$$19ef61df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.asthait.interviewslotbooking.service.SlotService$$EnhancerBySpringCGLIB$$56657bef.createSlot(<generated>)
+	at com.asthait.interviewslotbooking.service.impl.InterviewBookingServiceImpl.createBookingSlot(InterviewBookingServiceImpl.java:46)
+	at com.asthait.interviewslotbooking.controller.InterviewBookingController.createBookingSlot(InterviewBookingController.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-01-20 09:18:41,927 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:18:41,927 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 09:18:41,941 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 09:18:41,945 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 09:18:52,309 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 5088 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 09:18:52,313 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 09:18:54,634 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 09:18:54,997 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 346 ms. Found 3 JPA repository interfaces.
+2024-01-20 09:18:56,325 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 09:18:56,341 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:18:56,342 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 09:18:56,342 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 09:18:56,544 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 09:18:56,544 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4147 ms
+2024-01-20 09:18:56,792 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 09:18:57,073 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 09:18:57,084 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 09:18:57,723 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 09:18:57,999 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 09:18:58,578 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 09:18:58,949 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 09:19:01,395 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 09:19:01,431 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:19:04,369 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 09:19:04,841 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 09:19:05,139 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 09:19:05,979 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:19:06,075 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 09:19:06,077 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 09:19:06,117 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 09:19:06,180 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 09:19:06,462 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 14.833 seconds (JVM running for 16.536)
+2024-01-20 09:19:06,767 [RMI TCP Connection(4)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 09:19:06,767 [RMI TCP Connection(4)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 09:19:06,775 [RMI TCP Connection(4)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2024-01-20 09:19:09,711 [http-nio-8080-exec-2] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=2024-01-25T10:00, endTime=2024-01-25T11:00)
+2024-01-20 09:19:09,915 [http-nio-8080-exec-2] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, version=null)
+2024-01-20 09:19:16,001 [http-nio-8080-exec-3] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=null, endTime=2024-01-25T11:00)
+2024-01-20 09:19:16,016 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null
+	at com.asthait.interviewslotbooking.service.SlotService.validateCreateSlotRequest(SlotService.java:56)
+	at com.asthait.interviewslotbooking.service.SlotService.createSlot(SlotService.java:35)
+	at com.asthait.interviewslotbooking.service.SlotService$$FastClassBySpringCGLIB$$19ef61df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.asthait.interviewslotbooking.service.SlotService$$EnhancerBySpringCGLIB$$768b1e21.createSlot(<generated>)
+	at com.asthait.interviewslotbooking.service.impl.InterviewBookingServiceImpl.createBookingSlot(InterviewBookingServiceImpl.java:46)
+	at com.asthait.interviewslotbooking.controller.InterviewBookingController.createBookingSlot(InterviewBookingController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-01-20 09:29:24,412 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:29:24,413 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 09:29:24,447 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 09:29:24,457 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 09:29:35,293 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 12236 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 09:29:35,298 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 09:29:38,517 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 09:29:39,093 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 527 ms. Found 3 JPA repository interfaces.
+2024-01-20 09:29:40,517 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 09:29:40,557 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:29:40,558 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 09:29:40,559 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 09:29:40,964 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 09:29:40,964 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5577 ms
+2024-01-20 09:29:41,385 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 09:29:42,108 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 09:29:42,134 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 09:29:42,925 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 09:29:43,150 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 09:29:43,551 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 09:29:43,758 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 09:29:45,116 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 09:29:45,137 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:29:47,219 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 09:29:47,670 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 09:29:47,847 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 09:29:49,109 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:29:49,203 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 09:29:49,204 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 09:29:49,238 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 09:29:49,310 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 09:29:49,615 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 14.98 seconds (JVM running for 17.285)
+2024-01-20 09:29:50,768 [RMI TCP Connection(8)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 09:29:50,768 [RMI TCP Connection(8)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 09:29:50,771 [RMI TCP Connection(8)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-01-20 09:33:10,440 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:33:10,440 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 09:33:10,456 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 09:33:10,460 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 09:33:22,139 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 15912 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 09:33:22,143 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 09:33:25,051 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 09:33:25,994 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 921 ms. Found 3 JPA repository interfaces.
+2024-01-20 09:33:27,125 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 09:33:27,145 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:33:27,146 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 09:33:27,146 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 09:33:27,413 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 09:33:27,413 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5173 ms
+2024-01-20 09:33:27,641 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 09:33:27,948 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 09:33:27,960 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 09:33:29,103 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 09:33:29,378 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 09:33:29,758 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 09:33:29,975 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 09:33:31,266 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 09:33:31,283 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:33:32,864 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 09:33:33,242 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 09:33:33,523 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 09:33:34,945 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:33:35,126 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 09:33:35,127 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 09:33:35,192 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 09:33:35,325 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 09:33:35,873 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 14.463 seconds (JVM running for 16.058)
+2024-01-20 09:33:36,390 [RMI TCP Connection(13)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 09:33:36,391 [RMI TCP Connection(13)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 09:33:36,396 [RMI TCP Connection(13)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-01-20 09:33:45,838 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:33:45,838 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 09:33:45,850 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 09:33:45,854 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 09:33:56,107 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 3596 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 09:33:56,113 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 09:33:58,667 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 09:33:59,376 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 685 ms. Found 3 JPA repository interfaces.
+2024-01-20 09:34:01,021 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 09:34:01,054 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:34:01,055 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 09:34:01,055 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 09:34:01,383 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 09:34:01,383 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5178 ms
+2024-01-20 09:34:01,852 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 09:34:02,436 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 09:34:02,467 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 09:34:03,150 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 09:34:03,300 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 09:34:03,927 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 09:34:04,466 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 09:34:06,476 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 09:34:06,498 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:34:08,413 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 09:34:09,268 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 09:34:09,520 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 09:34:10,971 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:34:11,075 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 09:34:11,076 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 09:34:11,124 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 09:34:11,225 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 09:34:11,646 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 16.266 seconds (JVM running for 18.277)
+2024-01-20 09:34:12,301 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 09:34:12,301 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 09:34:12,305 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-01-20 09:34:12,500 [http-nio-8080-exec-1] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=null, endTime=2024-01-25T11:00)
+2024-01-20 09:34:12,530 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null
+	at com.asthait.interviewslotbooking.service.SlotService.validateCreateSlotRequest(SlotService.java:56)
+	at com.asthait.interviewslotbooking.service.SlotService.createSlot(SlotService.java:35)
+	at com.asthait.interviewslotbooking.service.SlotService$$FastClassBySpringCGLIB$$19ef61df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.asthait.interviewslotbooking.service.SlotService$$EnhancerBySpringCGLIB$$d798dcb7.createSlot(<generated>)
+	at com.asthait.interviewslotbooking.service.impl.InterviewBookingServiceImpl.createBookingSlot(InterviewBookingServiceImpl.java:46)
+	at com.asthait.interviewslotbooking.controller.InterviewBookingController.createBookingSlot(InterviewBookingController.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-01-20 09:35:09,925 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:35:09,925 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 09:35:09,948 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 09:35:09,954 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 09:35:19,606 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 9896 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 09:35:19,611 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 09:35:22,583 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 09:35:22,980 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 374 ms. Found 3 JPA repository interfaces.
+2024-01-20 09:35:24,566 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 09:35:24,606 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:35:24,607 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 09:35:24,608 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 09:35:25,066 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 09:35:25,067 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5363 ms
+2024-01-20 09:35:25,333 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 09:35:25,694 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 09:35:25,711 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 09:35:26,264 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 09:35:26,485 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 09:35:26,780 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 09:35:26,986 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 09:35:28,096 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 09:35:28,112 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:35:29,641 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 09:35:30,171 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 09:35:30,327 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 09:35:31,315 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:35:31,410 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 09:35:31,414 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 09:35:31,461 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 09:35:31,541 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 09:35:32,165 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 13.235 seconds (JVM running for 15.194)
+2024-01-20 09:35:32,485 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 09:35:32,485 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 09:35:32,488 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-01-20 09:35:32,741 [http-nio-8080-exec-2] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: CreateSlotRequestDTO(startTime=null, endTime=2024-01-25T11:00)
+2024-01-20 09:35:32,792 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.time.LocalDateTime.isAfter(java.time.chrono.ChronoLocalDateTime)" because "startTime" is null
+	at com.asthait.interviewslotbooking.service.SlotService.validateCreateSlotRequest(SlotService.java:56)
+	at com.asthait.interviewslotbooking.service.SlotService.createSlot(SlotService.java:35)
+	at com.asthait.interviewslotbooking.service.SlotService$$FastClassBySpringCGLIB$$19ef61df.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.asthait.interviewslotbooking.service.SlotService$$EnhancerBySpringCGLIB$$9ca33023.createSlot(<generated>)
+	at com.asthait.interviewslotbooking.service.impl.InterviewBookingServiceImpl.createBookingSlot(InterviewBookingServiceImpl.java:46)
+	at com.asthait.interviewslotbooking.controller.InterviewBookingController.createBookingSlot(InterviewBookingController.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-01-20 09:54:14,511 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:54:14,515 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 09:54:14,541 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 09:54:14,546 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 09:54:33,760 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 15204 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 09:54:33,761 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-01-20 09:54:33,766 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 09:54:36,831 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 09:54:37,256 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 412 ms. Found 3 JPA repository interfaces.
+2024-01-20 09:54:38,939 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 09:54:38,965 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:54:38,966 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 09:54:38,967 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 09:54:39,297 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 09:54:39,297 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5430 ms
+2024-01-20 09:54:39,685 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 09:54:40,111 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 09:54:40,123 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 09:54:40,632 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 09:54:40,845 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 09:54:41,529 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 09:54:41,841 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 09:54:43,958 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 09:54:43,977 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 09:54:45,601 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 09:54:45,975 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 09:54:46,081 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 09:54:46,956 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 09:54:47,077 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 09:54:47,079 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 09:54:47,126 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 09:54:47,209 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 09:54:47,594 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 14.663 seconds (JVM running for 16.868)
+2024-01-20 09:54:47,993 [RMI TCP Connection(4)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 09:54:47,994 [RMI TCP Connection(4)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 09:54:47,998 [RMI TCP Connection(4)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-01-20 10:03:15,447 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 10:03:15,448 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 10:03:15,469 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 10:03:15,476 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-01-20 10:03:26,406 [main] INFO  c.a.i.InterviewSlotBookingApplication - Starting InterviewSlotBookingApplication using Java 17.0.6 on LAPTOP-NHE370LC with PID 12764 (C:\projects\interview-slot-booking\target\classes started by Mak in C:\projects\interview-slot-booking)
+2024-01-20 10:03:26,401 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2024-01-20 10:03:26,410 [main] INFO  c.a.i.InterviewSlotBookingApplication - No active profile set, falling back to default profiles: default
+2024-01-20 10:03:29,431 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-20 10:03:29,906 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 447 ms. Found 3 JPA repository interfaces.
+2024-01-20 10:03:31,101 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2024-01-20 10:03:31,118 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-01-20 10:03:31,125 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-01-20 10:03:31,125 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.50]
+2024-01-20 10:03:31,367 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-01-20 10:03:31,367 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4847 ms
+2024-01-20 10:03:31,529 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-01-20 10:03:31,797 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-01-20 10:03:31,806 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:interviewdb'
+2024-01-20 10:03:32,022 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-20 10:03:32,102 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-01-20 10:03:32,398 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-01-20 10:03:32,587 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-01-20 10:03:33,884 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-01-20 10:03:33,896 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 10:03:35,259 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-20 10:03:35,621 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2024-01-20 10:03:35,760 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2024-01-20 10:03:36,462 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-01-20 10:03:36,530 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2024-01-20 10:03:36,531 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-01-20 10:03:36,556 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-01-20 10:03:36,605 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-01-20 10:03:36,815 [main] INFO  c.a.i.InterviewSlotBookingApplication - Started InterviewSlotBookingApplication in 11.058 seconds (JVM running for 12.781)
+2024-01-20 10:03:36,985 [RMI TCP Connection(2)-192.168.0.161] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-20 10:03:36,985 [RMI TCP Connection(2)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-20 10:03:36,987 [RMI TCP Connection(2)-192.168.0.161] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-01-20 10:05:17,364 [http-nio-8080-exec-8] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: com.asthait.interviewslotbooking.dto.request.CreateSlotRequestDTO@3e4606ee
+2024-01-20 10:05:17,432 [http-nio-8080-exec-8] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, version=null)
+2024-01-20 10:05:23,666 [http-nio-8080-exec-9] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to get all slots with date-time range: 2024-01-25T10:00 to 2024-01-25T16:00
+2024-01-20 10:05:23,679 [http-nio-8080-exec-9] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Returning slots: [SlotResponseDTO(slotId=1, startTime=2024-01-25T10:00, endTime=2024-01-25T11:00, status=AVAILABLE, interviewDetails=null)]
+2024-01-20 10:06:23,681 [http-nio-8080-exec-2] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: com.asthait.interviewslotbooking.dto.request.BookingRequestDTO@6be0f327
+2024-01-20 10:07:01,601 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to cancel booking: com.asthait.interviewslotbooking.dto.request.CancelBookingRequestDTO@189b5fb1
+2024-01-20 10:07:01,608 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking canceled successfully
+2024-01-20 10:07:01,616 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to update booking: com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO@29be7749
+2024-01-20 10:07:01,616 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking updated successfully
+2024-01-20 10:07:01,623 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: com.asthait.interviewslotbooking.dto.request.CreateSlotRequestDTO@79767781
+2024-01-20 10:07:01,630 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: com.asthait.interviewslotbooking.dto.request.BookingRequestDTO@16c3ca31
+2024-01-20 10:07:01,631 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 10:07:01,646 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to get all slots with date-time range: 2024-01-20T10:07:01.645595300 to 2024-01-20T11:07:01.645595300
+2024-01-20 10:07:01,648 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Returning slots: [SlotResponseDTO(slotId=null, startTime=null, endTime=null, status=null, interviewDetails=null)]
+2024-01-20 10:07:01,877 [main] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-20T10:07:01.871411600, endTime=2024-01-20T12:07:01.871411600, status=AVAILABLE, version=null)
+2024-01-20 10:07:01,891 [main] ERROR c.a.i.service.SlotService - Slot overlaps with existing slot
+2024-01-20 10:07:01,915 [main] ERROR c.a.i.service.SlotService - Start time must be before the end time
+2024-01-20 10:09:36,477 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to cancel booking: com.asthait.interviewslotbooking.dto.request.CancelBookingRequestDTO@68809cc7
+2024-01-20 10:09:36,483 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking canceled successfully
+2024-01-20 10:09:36,489 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to update booking: com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO@aced190
+2024-01-20 10:09:36,490 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking updated successfully
+2024-01-20 10:09:36,495 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: com.asthait.interviewslotbooking.dto.request.CreateSlotRequestDTO@2d6aca33
+2024-01-20 10:09:36,510 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: com.asthait.interviewslotbooking.dto.request.BookingRequestDTO@63e5e5b4
+2024-01-20 10:09:36,511 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 10:09:36,541 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to get all slots with date-time range: 2024-01-20T10:09:36.537153600 to 2024-01-20T11:09:36.537153600
+2024-01-20 10:09:36,543 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Returning slots: [SlotResponseDTO(slotId=null, startTime=null, endTime=null, status=null, interviewDetails=null)]
+2024-01-20 10:09:36,864 [main] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-20T10:09:36.852740700, endTime=2024-01-20T12:09:36.852740700, status=AVAILABLE, version=null)
+2024-01-20 10:09:36,883 [main] ERROR c.a.i.service.SlotService - Slot overlaps with existing slot
+2024-01-20 10:09:36,918 [main] ERROR c.a.i.service.SlotService - Start time must be before the end time
+2024-01-20 10:10:25,656 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to cancel booking: com.asthait.interviewslotbooking.dto.request.CancelBookingRequestDTO@bb095
+2024-01-20 10:10:25,677 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking canceled successfully
+2024-01-20 10:10:25,693 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to update booking: com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO@2eb79cbe
+2024-01-20 10:10:25,695 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking updated successfully
+2024-01-20 10:10:25,708 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: com.asthait.interviewslotbooking.dto.request.CreateSlotRequestDTO@56da52a7
+2024-01-20 10:10:25,723 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: com.asthait.interviewslotbooking.dto.request.BookingRequestDTO@231baf51
+2024-01-20 10:10:25,725 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 10:10:25,788 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to get all slots with date-time range: 2024-01-20T10:10:25.783731400 to 2024-01-20T11:10:25.783731400
+2024-01-20 10:10:25,795 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Returning slots: [SlotResponseDTO(slotId=null, startTime=null, endTime=null, status=null, interviewDetails=null)]
+2024-01-20 10:10:26,009 [main] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-20T10:10:26.004807400, endTime=2024-01-20T12:10:26.004807400, status=AVAILABLE, version=null)
+2024-01-20 10:10:26,017 [main] ERROR c.a.i.service.SlotService - Slot overlaps with existing slot
+2024-01-20 10:10:26,032 [main] ERROR c.a.i.service.SlotService - Start time must be before the end time
+2024-01-20 10:10:38,193 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to cancel booking: com.asthait.interviewslotbooking.dto.request.CancelBookingRequestDTO@43cf6ea3
+2024-01-20 10:10:38,197 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking canceled successfully
+2024-01-20 10:10:38,201 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to update booking: com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO@10ec523c
+2024-01-20 10:10:38,202 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking updated successfully
+2024-01-20 10:10:38,208 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: com.asthait.interviewslotbooking.dto.request.CreateSlotRequestDTO@1e63d216
+2024-01-20 10:10:38,213 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: com.asthait.interviewslotbooking.dto.request.BookingRequestDTO@4e38d975
+2024-01-20 10:10:38,214 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 10:10:38,223 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to get all slots with date-time range: 2024-01-20T10:10:38.222862200 to 2024-01-20T11:10:38.222862200
+2024-01-20 10:10:38,225 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Returning slots: [SlotResponseDTO(slotId=null, startTime=null, endTime=null, status=null, interviewDetails=null)]
+2024-01-20 10:10:38,363 [main] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-20T10:10:38.357643600, endTime=2024-01-20T12:10:38.357643600, status=AVAILABLE, version=null)
+2024-01-20 10:10:38,370 [main] ERROR c.a.i.service.SlotService - Slot overlaps with existing slot
+2024-01-20 10:10:38,383 [main] ERROR c.a.i.service.SlotService - Start time must be before the end time
+2024-01-20 10:10:46,937 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to cancel booking: com.asthait.interviewslotbooking.dto.request.CancelBookingRequestDTO@13cd7ea5
+2024-01-20 10:10:46,944 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking canceled successfully
+2024-01-20 10:10:46,950 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to update booking: com.asthait.interviewslotbooking.dto.request.UpdateBookingRequestDTO@2d6aca33
+2024-01-20 10:10:46,951 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Booking updated successfully
+2024-01-20 10:10:46,956 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to create booking slot: com.asthait.interviewslotbooking.dto.request.CreateSlotRequestDTO@63e5e5b4
+2024-01-20 10:10:46,963 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to book a slot: com.asthait.interviewslotbooking.dto.request.BookingRequestDTO@4fcc0416
+2024-01-20 10:10:46,964 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Slot booked successfully
+2024-01-20 10:10:46,975 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Received request to get all slots with date-time range: 2024-01-20T10:10:46.975828200 to 2024-01-20T11:10:46.975828200
+2024-01-20 10:10:46,977 [main] INFO  c.a.i.s.i.InterviewBookingServiceImpl - Returning slots: [SlotResponseDTO(slotId=null, startTime=null, endTime=null, status=null, interviewDetails=null)]
+2024-01-20 10:10:47,129 [main] INFO  c.a.i.service.SlotService - Created slot: Slot(id=null, startTime=2024-01-20T10:10:47.122787500, endTime=2024-01-20T12:10:47.122787500, status=AVAILABLE, version=null)
+2024-01-20 10:10:47,137 [main] ERROR c.a.i.service.SlotService - Slot overlaps with existing slot
+2024-01-20 10:10:47,152 [main] ERROR c.a.i.service.SlotService - Start time must be before the end time
+2024-01-20 10:10:49,559 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-20 10:10:49,560 [SpringApplicationShutdownHook] INFO  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-01-20 10:10:49,578 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-01-20 10:10:49,581 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

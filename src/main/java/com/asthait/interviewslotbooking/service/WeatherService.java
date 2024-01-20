@@ -2,8 +2,6 @@ package com.asthait.interviewslotbooking.service;
 
 import com.asthait.interviewslotbooking.exception.BookingException;
 import com.asthait.interviewslotbooking.util.ExceptionMessageUtil;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

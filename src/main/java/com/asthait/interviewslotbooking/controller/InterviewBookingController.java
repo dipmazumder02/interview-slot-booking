@@ -3,19 +3,18 @@ package com.asthait.interviewslotbooking.controller;
 import com.asthait.interviewslotbooking.dto.request.*;
 import com.asthait.interviewslotbooking.dto.response.ResponseDTO;
 import com.asthait.interviewslotbooking.dto.response.SlotResponseDTO;
-import com.asthait.interviewslotbooking.exception.BookingException;
 import com.asthait.interviewslotbooking.model.Slot;
 import com.asthait.interviewslotbooking.service.abstraction.InterviewBookingService;
 import com.asthait.interviewslotbooking.util.ResponseMessageUtil;
 import lombok.RequiredArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.time.LocalDateTime;
 import java.util.List;
 
+@Validated
 @RestController
 @RequestMapping("/api/interview")
 @RequiredArgsConstructor

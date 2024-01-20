@@ -1,19 +1,21 @@
 package com.asthait.interviewslotbooking.dto.request;
 
 // CreateSlotRequestDTO.java
+
 import com.asthait.interviewslotbooking.desrializer.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
-@Data
-@RequiredArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class AllSlotsRequestDTO {
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @FutureOrPresent(message = "Start time must be in the present or future")

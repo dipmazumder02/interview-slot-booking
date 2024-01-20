@@ -1,11 +1,17 @@
 package com.asthait.interviewslotbooking.dto.request;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.validation.constraints.NotNull;
-import lombok.Data;
 
 /**
  * Data Transfer Object for creating a booking request.
  */
-@Data
+@NoArgsConstructor
+@Getter
+@Setter
 public class BookingRequestDTO {
 
     @NotNull(message = "Interviewer ID cannot be null")
