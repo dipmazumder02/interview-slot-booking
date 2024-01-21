@@ -19,8 +19,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class SlotService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(SlotService.class);
-
     private final SlotRepository slotRepository;
 
     public Slot getSlotBySlotId(Long slotId) {
