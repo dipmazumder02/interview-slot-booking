@@ -95,7 +95,7 @@ The Interview Booking System is a Java Spring Boot application designed to facil
         "interviewerId": 1,
         "slotId": 1,
         "agenda": "Updated Interview Agenda",
-        "city": "london".
+        "city": "london",
         "interviewBookingSlotId": 1
     }
 - **Response:**
